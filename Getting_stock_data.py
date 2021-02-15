@@ -2,7 +2,8 @@
 from nsetools import Nse
 from pprint import pprint
 nse = Nse()
-data = nse.get_quote('infy') # symbol of the company in brackets
+company = str(input("Enter the symbol of the company : "))
+data = nse.get_quote(company)
 print('=================================='+ data['companyName']+'\t'    + data['symbol']+'=================================================================')
 print("Previous Day close (" , end="")
 print(data['recordDate'] ,end="")
@@ -73,7 +74,3 @@ print('              AveragePrice : ' , end ="")
 print(data['averagePrice'],end = "\n")
 print('TotalTradedVolume : ' , end ="")
 print(data['totalTradedVolume'],end = "\n")
-
-
-
-
